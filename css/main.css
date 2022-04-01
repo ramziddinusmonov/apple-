@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.woff2) format('woff2'),
+    url(../fonts/Roboto-Regular.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Bold.woff2) format('woff2'),
+    url(../fonts/Roboto-Bold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+/* CUSTOM PROPS */
+:root{
+    --text-color:#333;
+    --brand-color:#ea623c;
+    --site-fonts:"Roboto"
+}
+
+/* GLOBAL STYLES */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*:focus {
+    outline: var(--brand-color) 1px dashed;
+    outline-offset: 5px;
+}
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    font-family: var(--site-fonts), 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text-color);
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* CONTAINER SYTLES */
+.container {
+    width: 100%;
+    max-width: 1040px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SITE HEADER STYLES */
+.site-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.site-header-container {
+    display: flex;
+    align-items:center;
+}
+.site-header-logo {
+    display: flex;
+    margin-right: auto;
+}
+.site-header-logo-img {
+    width: 35px;
+    height: 41.5px;
+    object-fit: contain;
+}
+.site-header-logo-img:hover{
+    opacity: 0.8;
+}
+.site-header-logo-img:active{
+    opacity: 0.6;
+}
+.site-header-nav {
+    margin-right: 40px;
+}
+.site-header-nav-list {
+    display: flex;
+    align-items:center;
+    list-style: none;
+}
+.site-header-nav-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+.site-header-nav-item-link {
+    padding-top: 6px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 22.5px;
+    color:var(--text-color)
+}
+.site-header-nav-item-link:hover{
+    border-bottom:3px solid var(--text-color)
+}
+
+.site-header-form-input {
+    width:153px;
+    border:none;
+    border-bottom:1px solid var(--text-color);
+    outline:  none;
+    padding:5px 0px
+}
+
+/* SITE MAIN SECTION STYLES */
+.sit-main {
+    background-color:#fff;
+    flex-grow: 1;
+}
+/* SITE INTRO SECTION STYLES */
+.intro-section {
+    padding-top: 120px;
+    padding-bottom: 185px;
+    background-image: url(../images/watch-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 530.5px) bottom;
+}
+.global-content {
+    width: 100%;
+    max-width: 490px;
+}
+
+.global-content-title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    font-family: var(--site-fonts);
+    color:#000;
+    margin-bottom: 30px;
+}
+.global-content-text {
+    font-size: 16px;
+    line-height: 24px;
+    color:#777;
+    padding-left: 37px;
+    border-left: 3px solid #888;
+    margin-bottom: 30px;
+}
+.global-content-btn {
+    font-size: 18px;
+    font-weight: bold;
+    line-height:27px;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color:var(--brand-color);
+    padding: 12px 38.5px;
+    display: inline-block;
+    cursor: pointer;
+}
+.global-content-btn:hover{
+    background-color:#C9514C;
+}
+/* FEATURES SECTION STYLES */
+.features {
+    padding-top: 68px;
+    padding-bottom: 70px;
+    border-top: 2px solid #ddd;
+}
+.features-list {
+    display: flex;
+    justify-content: space-between;
+}
+.features-list-item {
+    width: 280px;
+    list-style: none;
+}
+.features-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 27px;
+    text-transform: uppercase;
+    color:#222;
+    margin-bottom: 30px;
+}
+.features-item-text {
+    margin-bottom: 20px;
+}
+.features-item-dot {
+    width: 8px;
+    height: 8px;
+    background-color:#ddd;
+    display: inline-block;
+    box-shadow:18px 0 #ddd,36px 0 #ddd;
+   ;
+}
+.features-item-link {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25.5px;
+    color:var(--brand-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items:center;
+}
+.features-item-link::before{
+    content:"";
+    width:40px;
+    height: 3px;
+    background-color:var(--brand-color);
+    margin-right: 10px;
+    transition: width 0.5s ease;
+}
+.features-item-link:hover::before{
+    width: 50px;
+}
+.features-item-link:active{
+    opacity: 0.6;
+}
+
+/* SPORT BAND */
+.sport-band {
+    padding-top: 176.46px;
+    padding-bottom: 176.46px;
+    background-image:url(../images/site-main\ bottom-right.jpg);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 300px);
+}
+.sport-band-btn {
+    padding: 12px 90px;
+    
+}
+/* FOOTER SECTION STYLES */
+.footer {
+    padding-top: 250px;
+    padding-bottom: 251.19px;
+    background-image:url(../images/footer-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.footer-container {
+    display: flex;
+    justify-content: right;
+}
+.footer-title{
+    color:#fff;
+}
+.footer-text {
+    color:#fff;
+    border-left:3px solid #fff;
+}
+
+
+/* BACKGROUND RETINA */
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (    min--moz-device-pixel-ratio:2),
+only screen and (       -o-min-device-pixet-ratio:2/1),
+only screen and (          min-device-pixet-ratio:2),
+only screen and (                   min-resolution:192dpi),
+only screen and (                    min-resolution:2dppx) {
+    .intro-section{
+        background-image: url(../images/watch-bg@2x.jpg);
+    }
+    .sport-band{
+        background-image:url(../images/site-main-bottom-right@2x.jpg);
+    }
+}
